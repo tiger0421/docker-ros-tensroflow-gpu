@@ -39,6 +39,8 @@ RUN sed -i 's#http://tw.archive.ubuntu.com/#http://archive.ubuntu.com/#' /etc/ap
     rm -rf /var/lib/apt/lists/*
 RUN curl -kL https://bootstrap.pypa.io/get-pip.py | python
 
+RUN echo source /opt/ros/melodic/setup.bash >> /home/${DOCKER_USER}/.bashrc
+
 ARG DOCKER_UID=1000
 ARG DOCKER_USER=docker
 ARG DOCKER_PASSWORD=docker
