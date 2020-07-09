@@ -7,7 +7,7 @@ this images is based on [this container](https://github.com/tiger0421/docker-ros
 - ROS melodic
 
 - Python      2.7
-- Tensorflow  2.1.0
+- Tensorflow  2.0.0
 
 ## User account
 User named "docker" is already created and this user is beloged to sudoers.  
