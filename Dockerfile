@@ -45,9 +45,6 @@ ARG DOCKER_PASSWORD=docker
 RUN useradd -m --uid ${DOCKER_UID} --groups sudo ${DOCKER_USER} \
   && echo ${DOCKER_USER}:${DOCKER_PASSWORD} | chpasswd
 
-RUN pip install setuptools google-auth --upgrade
-RUN pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-2.1.0-cp27-cp27mu-manylinux2010_x86_64.whl
-
 USER ${DOCKER_USER}
 WORKDIR /home/${DOCKER_USER}
 
